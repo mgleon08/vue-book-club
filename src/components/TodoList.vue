@@ -1,33 +1,46 @@
 <template>
   <div id="TodoList">
     <div class="top-area">
-      <input class="top-area-input" type="text" v-model.trim="todoMessage" v-on:keyup.enter="addTodo">
-      <button class="top-area-add" @click="addTodo">Add Todo</button>
+      <el-row :gutter="10">
+        <el-col :span="8"><el-input type="text" v-model.trim="todoMessage" v-on:keyup.enter="addTodo" placeholder="请输入内容"></el-input></el-col>
+        <el-col :span="4"><el-button type="primary" @click="addTodo" icon="el-icon-circle-plus"></el-button></el-col>
+      </el-row>
       <div class="top-area-info">
         共有: {{ todoList.length }} 筆資料，有 {{ checkedItemCount.length }} 筆完成，{{ uncheckedItemCount.length }} 未筆完成
       </div>
       <div v-if="isMaxLimit" class="top-area-info--full">已達新增上限！v-if</div>
       <div v-show="isMaxLimit" class="top-area-info--full">已達新增上限！v-show</div>
     </div>
-    <div class="content">
-      未完成
-      <ul class="todolist">
-        <li v-for="(todo, index) in uncheckedItemCount" :key="index" class="todolist-item">
-          <input :id="`todo-${index}`" type="checkbox" v-model="todo.checked">
-          <label :for="`todo-${index}`" :class="[{ 'todolist-item--checked': todo.checked }]">{{ todo.name }}</label>
-          <button class="todolist-item-remove" @click="removeTodo(index)">remove</button>
-        </li>
-      </ul>
-    </div>
-      已完成
-      <ul class="todolist">
-        <li v-for="(todo, index) in checkedItemCount" :key="index" class="todolist-item">
-          <input :id="`todo-${index}`" type="checkbox" v-model="todo.checked">
-          <label :for="`todo-${index}`" :class="[{ 'todolist-item--checked': todo.checked }]">{{ todo.name }}</label>
-          <button class="todolist-item-remove" @click="removeTodo(index)">remove</button>
-        </li>
-      </ul>
-    </div>
+
+    <el-row :gutter="10">
+      <el-col :span="8">
+        <div class="content">
+          未完成
+          <ul class="todolist">
+            <li v-for="(todo, index) in uncheckedItemCount" :key="index" class="todolist-item">
+              <input :id="`todo-${index}`" type="checkbox" v-model="todo.checked">
+              <label :for="`todo-${index}`" :class="[{ 'todolist-item--checked': todo.checked }]">{{ todo.name }}</label>
+              <button class="todolist-item-remove" @click="removeTodo(index)">remove</button>
+            </li>
+          </ul>
+        </div>
+      </el-col>
+    </el-row>
+    <el-row :gutter="10">
+      <el-col :span="8">
+        <div class="content">
+                已完成
+          <ul class="todolist">
+            <li v-for="(todo, index) in checkedItemCount" :key="index" class="todolist-item">
+              <input :id="`todo-${index}`" type="checkbox" v-model="todo.checked">
+              <label :for="`todo-${index}`" :class="[{ 'todolist-item--checked': todo.checked }]">{{ todo.name }}</label>
+              <button class="todolist-item-remove" @click="removeTodo(index)">remove</button>
+            </li>
+          </ul>
+        </div>
+      </el-col>
+    </el-row>
+  </div>
 </template>
 
 <script>

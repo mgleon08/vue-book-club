@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import ElementUI from 'element-ui'
 import lang from 'element-ui/lib/locale/lang/zh-TW'
+import 'normalize.css'
 import 'element-ui/lib/theme-chalk/index.css'
 
 Vue.use(ElementUI, { lang })
