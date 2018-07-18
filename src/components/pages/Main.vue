@@ -30,6 +30,10 @@ export default {
           name: 'Ｗeek1 - Todolist'
         },
         {
+          url: '/week2/lifecycle',
+          name: 'Ｗeek2 - LifeCycle'
+        },
+        {
           url: '/test',
           name: 'Test'
         }
