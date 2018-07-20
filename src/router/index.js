@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import HelloWorld from '@/views/HelloWorld'
 // 這邊的 @ 指的是 src/
-import TodoList from '@/components/TodoList'
-import Test from '@/components/Test'
+import TodoList from '@/views/TodoList'
+import Test from '@/views/Test'
 import LifeCycle from '@/views/LifeCycle'
-import Main from '@/components/pages/Main'
+import Main from '@/views/Main'
 
 Vue.use(Router)
 
