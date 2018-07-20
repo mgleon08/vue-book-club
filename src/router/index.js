@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import HelloWorld from '@/views/HelloWorld'
 // 這邊的 @ 指的是 src/
 import TodoList from '@/views/TodoList'
-import Test from '@/views/Test'
 import LifeCycle from '@/views/LifeCycle'
 import Main from '@/views/Main'
 
@@ -34,9 +33,14 @@ export default new Router({
           component: LifeCycle
         },
         {
+          path: '/week3/component',
+          name: 'Week3-Component',
+          component: () => import('@/views/Component')
+        },
+        {
           path: 'test',
           name: 'Test',
-          component: Test
+          component: () => import('@/views/Test')
         }
       ]
     }
