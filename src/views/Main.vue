@@ -34,8 +34,12 @@ export default {
           name: 'Ｗeek2 - LifeCycle'
         },
         {
-          url: '/week3/component',
-          name: 'Ｗeek3 - Component'
+          url: '/week3/component-tab',
+          name: 'Ｗeek3 - ComponentTab'
+        },
+        {
+          url: '/week3/component-step',
+          name: 'Ｗeek3 - ComponentStep'
         },
         {
           url: '/test',

@@ -33,9 +33,14 @@ export default new Router({
           component: LifeCycle
         },
         {
-          path: '/week3/component',
-          name: 'Week3-Component',
-          component: () => import('@/views/Component')
+          path: '/week3/component-tab',
+          name: 'Week3-ComponentTab',
+          component: () => import('@/views/ComponentTab')
+        },
+        {
+          path: '/week3/component-step',
+          name: 'Week3-ComponentStep',
+          component: () => import('@/views/ComponentStep')
         },
         {
           path: 'test',
