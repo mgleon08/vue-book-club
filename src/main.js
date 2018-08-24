@@ -7,6 +7,7 @@ import ElementUI from 'element-ui'
 import lang from 'element-ui/lib/locale/lang/zh-TW'
 import 'normalize.css'
 import 'element-ui/lib/theme-chalk/index.css'
+import store from './store'
 
 Vue.use(ElementUI, { lang })
 
@@ -16,6 +17,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

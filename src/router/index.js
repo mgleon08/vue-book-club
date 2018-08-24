@@ -43,6 +43,11 @@ export default new Router({
           component: () => import('@/views/ComponentStep')
         },
         {
+          path: '/week4/vuex',
+          name: 'Week4-Vuex',
+          component: () => import('@/views/Vuex')
+        },
+        {
           path: 'test',
           name: 'Test',
           component: () => import('@/views/Test')

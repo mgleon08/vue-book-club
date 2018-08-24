@@ -42,6 +42,10 @@ export default {
           name: 'Ｗeek3 - ComponentStep'
         },
         {
+          url: '/week4/vuex',
+          name: 'Week4 - Vuex'
+        },
+        {
           url: '/test',
           name: 'Test'
         }
