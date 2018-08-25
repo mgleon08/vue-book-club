@@ -48,6 +48,16 @@ export default new Router({
           component: () => import('@/views/Vuex')
         },
         {
+          path: '/week5/vuex',
+          name: 'Week5-Vuex',
+          component: () => import('@/views/Vuex2/ProductList')
+        },
+        {
+          name: 'CheckOut',
+          path: '/checkout',
+          component: () => import('@/views/Vuex2/CheckOut')
+        },
+        {
           path: 'test',
           name: 'Test',
           component: () => import('@/views/Test')

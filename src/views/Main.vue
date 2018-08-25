@@ -46,6 +46,10 @@ export default {
           name: 'Week4 - Vuex'
         },
         {
+          url: '/week5/vuex',
+          name: 'Week5 - Vuex'
+        },
+        {
           url: '/test',
           name: 'Test'
         }

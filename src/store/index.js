@@ -5,6 +5,7 @@ import * as getters from './getters.js'
 import * as actions from './actions.js'
 
 import userForms from './modules/userForm.js'
+import shop from './modules/shop'
 
 Vue.use(Vuex)
 
@@ -14,7 +15,8 @@ export default new Vuex.Store({
   getters,
   actions,
   modules: {
-    userForms
+    userForms,
+    shop
   },
   // 嚴格模式，禁止直接修改 state
   strict: true
